@@ -5,36 +5,157 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+     #adress{
+        text-align: center;
+        align-items: center;
+     }
+    .adress{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;padding: 20px;
+        align-content: center;
+
+
+    }
+    .heading{
+        display: flex;
+        justify-content:center;
+        margin: 20px;
+    }  
+    img{
+        width: 20px;
+        height: 20%;
+        margin-right: 10px;
+        align-self: center;
+    }  
+    input , select{
+        margin-left: 20px;
+    }
+    body>h1,h3{
+        text-align: center;
+    }
+    button{
+        margin: 10%;
+        background-color: green;
+        color: whitesmoke;
+        
+    }
+    button:hover{
+       background-color:  slateblue;
+    }
+    </style>
 </head>
 <body>
     <h1>
-        Shipping Address
+        Check Out
     </h1>
-    <div id="name">
-        <h5>
-            First Name (required)
-        </h5>
-        <input type="text">
-        <h5>
-            Last Name (required)
-        </h5>
-        <input type="text">
-    </div>
-    <div id="adress">
-        <h5>
-            Adress
-        </h5>
-        <input type="text">
-    </div>
-    <div>
-        <h5>
-            Phone Number (required)
-        </h5>
-        <input type="number">
-    </div>
+    <h3>
+        Shipping Address
+    </h3>
+    <div id="grid">
+        <div class="adress">
+           
+            <div class="fullname" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/456/456212.png"  alt="">
+                <h3>
+                    Full Name
+                </h3>
+                </div>
+                <input type="text" placeholder="Enter your Name">
+            </div>
+            <div class="email" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/542/542638.png"  alt="">
+                <h3>
+                    Email
+                </h3>
+                </div>
+                <input type="email" placeholder="Enter your Email">
+            </div>
+            <div class="Adress" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/542/542638.png"  alt="">
+                <h3>
+                    Adress
+                </h3>
+                </div>
+                <input type="email" placeholder="Enter your Adress">
+            </div>
+            <div class="State" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/9859/9859521.png"  alt="">
+                <h3>
+                    State
+                </h3>
+                </div>
+                <select>
+                    <option value="None"></option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="GA">Gujarat</option>
+                    <option value="HR">Haryana</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="JK">Jammu and Kashmir</option>
+                    <option value="GA">Goa</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MH">Maharashtra</option>
+                        <option value="MN">Manipur</option>
+                        <option value="ML">Meghalaya</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="WB">West Bengal</option>
+                    <option value="AN">Andaman and Nicobar Islands</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="DN">Dadra and Nagar Haveli</option>
+                    <option value="DD">Daman and Diu</option>
+                    <option value="DL">Delhi</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="PY">Puducherry</option>
+                </select>
+            </div>
+            <div class="Pincode" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/684/684908.png"  alt="">
+                <h3>
+                    Pincode
+                </h3>
+                </div>
+                <input type="number" placeholder="Enter your Pincode">
+            </div>
+            <div class="mobilenumber" id="adress">
+                <div class="heading">
+                    <img     src="https://cdn-icons-png.flaticon.com/512/5585/5585856.png"  alt="">
+                <h3>
+                    Mobile
+                </h3>
+                </div>
+                <input type="number" placeholder="Enter your Phone Number">
+            </div>
+            
+            <button>
+                <a href="./payment.html">Continue to Payment</a>
+            </button>
 
-    <div>
-        <a href="./checkout2.html"><button>Next</button></a>
+        </div>
     </div>
 </body>
 </html>

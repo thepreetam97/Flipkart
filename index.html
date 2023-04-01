@@ -6,34 +6,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        header {
+        .nav{
+            background-color: rgb(40,116,240);
+            display: flex;
+            justify-content: space-evenly;
             
-            background-image: red;
-            width: 100px;
-            height: 300px;
-            height: fit-content;
-            /* padding: 10px 30px */
+        }
+        .nav>div{
+            margin: 10px;
         }
         
         img{
-            width: 10%;
+            width: 200px;
+            height: min-content;
+            padding: 20px;
+            margin: auto;
         }
+        .Search{
+            padding: 20px;
+            display: flex;
+            width: 30%;
+            justify-content: flex-end;
+            border: none;
+        }
+        .Search form{
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            border: none;
+        }
+        .Search input{
+            width: 80%;
+            height: 100%;
+            border: none;
+        }
+        .Search button{
+            width: 20%;
+            text-align: center;
+            height: 100%;
+            border: none;
+            
+        }
+        
+        /* .options{
+            display: flex;
+            width: 45%;
+            margin: auto;
+            padding: 20px;
+            justify-content:space-between;
+        } */
+        .options>div{
+            margin: auto;
+            width: 10%;
+            align-items: center;
+            display: flex;
+
+        }
+        .button img{
+           width:20% ;
+            
+        }
+        button{
+            width: min-content;
+            padding: 20px;
+            background: none;
+            border: 0px;
+            color: white;
+            font-size: 20px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            margin-top: auto;
+            margin-bottom: auto;
+            border: none;
+            list-style: none;
+            
+        }
+        @media screen and (max-width: 700px) {
+  
+        .Search{
+            display: none;
+        }
+}
     </style>
 </head>
 <body>
-    <head class="nav">
-        <div>
-            <img src="./logo.png" alt="">
+    <div class="nav">
+        
+            <a href="index.html"><img src="logofinal.png" alt=""></a>
+        
+        <div class="Search">
+            <form>
+                <input type="text" placeholder="Search Here">
+                <button>
+                    Search
+                </button>
+            </form>
         </div>
-        <div>
-            <input type="text" placeholder="Search Here">
-            <img src="./loupe.png" alt="">
-        </div>
-        <div>
-           <a href="./login.html">Login</a>
-            <a href="./login.html">Become a Seller</a>
-            <a href="./cart.html">Cart</a>
-        </div>
-    </head>
+        <ul>
+            <li>
+                <a href="login.html"><button>Login</button></a>
+            </li>
+            <li>
+                <a href="login.html"><button>Become a Seller</button></a>
+            </li>
+            <li>
+                <a href="cart.html"><button>Cart</button></a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
