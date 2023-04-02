@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>partial Clone of flipkart</title>
     <style>
         .nav{
             background-color: rgb(40,116,240);
@@ -306,6 +306,18 @@ footer h4{
   font-size: 50%;
 
 }
+.slideshow{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+
+.slideshow img{
+  width: 80%;
+  align-self: auto;
+}
+
     </style>
 </head>
 <body>
@@ -379,7 +391,7 @@ footer h4{
     </div>
 
     <!-- slide show -->
-    <div class="slideshow-container">
+    <!-- <div class="slideshow-container">
 
         
         <div class="mySlides fade">
@@ -400,18 +412,25 @@ footer h4{
           <div class="text">Caption Three</div>
         </div>
       
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        Next and previous buttons -->
+        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
       <br>
       
-      <!-- The dots/circles -->
-      <div style="text-align:center">
+      The dots/circles -->
+      <!-- <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
+    </div> -->
+
+    <div class="slideshow">
+      <button id="prev" > <  </button>
+      <img src="" alt=""> 
+      <button id="next" > ></button>
+
     </div>
       <!-- filter and product -->
     
@@ -519,40 +538,68 @@ footer h4{
 <!-- footer -->
 </body>
 <script>
-  function openProductPage() {
-    a
-  }
+//   function openProductPage() {
+//     a
+//   }
  
-    let slideIndex = 1;
-showSlides(slideIndex);
+//     let slideIndex = 1;
+// showSlides(slideIndex);
 
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
 
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   let dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//     dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block";
+//   dots[slideIndex-1].className += " active";
+// }
+
+
     // slideshow
+    const image = document.querySelector(".slideshow img");
+    const prevButton = document.querySelector("#prev");
+    const nextButton = document.querySelector("#next");
+    let currentImage=0
+    let imageArr = [
+        "https://marketplace.canva.com/EAE6uxzge6c/1/0/1600w/canva-yellow-and-white-minimalist-big-sale-banner-BjBIq-T_6j4.jpg",
+        "https://marketplace.canva.com/EAE1gjmdjkQ/3/0/1600w/canva-yellow-and-black-super-weekend-sale-banner-qccqCrq6Umg.jpg",
+        "https://www.shutterstock.com/shutterstock/photos/1090866878/display_1500/stock-vector-brush-sale-banner-vector-1090866878.jpg",
+        "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/413ZyUpqloL._SX355_.jpg",
+        "https://www.shutterstock.com/image-vector/sale-banner-template-design-260nw-487080769.jpg",
+    ];
+    image.setAttribute("src", imageArr[currentImage]);
+    prevButton.addEventListener("click", function () {
+        currentImage--;
+        if (currentImage < 0) {
+            currentImage = imageArr.length - 1;
+        }
+        image.setAttribute("src", imageArr[currentImage]);
+    })
 
+    nextButton.addEventListener("click", function () {
+        currentImage++;
+        if (currentImage >= imageArr.length) {
+            currentImage = 0;
+        }
+        image.setAttribute("src", imageArr[currentImage]);
+    })
     // <!-- filter and product -->
     let data;
     async function fetchData() {
