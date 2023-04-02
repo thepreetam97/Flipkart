@@ -349,7 +349,15 @@ footer h4{
         sum += cartData[i].quantity * cartData[i].price;
       }
       total.innerText = sum;
+      if(sum===0){
+        
+        document.querySelector("#total").innerHTML="Cart is Empty";
+        document.querySelector("#checkout").innerHTML="";
+
+      }
+      
     }
+
     displayData()
 </script>
 </html>
