@@ -11,6 +11,7 @@
             display: flex;
             justify-content: space-evenly;
             
+            
         }
         .nav>div{
             margin: 10px;
@@ -47,7 +48,9 @@
             border: none;
             
         }
-        
+        .nav  button:hover{
+            background-color: grey;
+        }
         /* .options{
             display: flex;
             width: 45%;
@@ -66,7 +69,7 @@
            width:20% ;
             
         }
-        button{
+        .nav button{
             width: min-content;
             padding: 20px;
             background: none;
@@ -95,27 +98,27 @@
 <body>
     <div class="nav">
         
-        <a href="index.html"><img src="logofinal.png" alt=""></a>
-    
-    <div class="Search">
-        <form>
-            <input type="text" placeholder="Search Here">
-            <button>
-                Search
-            </button>
-        </form>
+            <a href="index.html"><img src="logofinal.png" alt=""></a>
+        
+        <div class="Search">
+            <form>
+                <input type="text" placeholder="Search Here">
+                <button>
+                    Search
+                </button>
+            </form>
+        </div>
+        <ul>
+            <li>
+                <a href="login.html"><button>Login</button></a>
+            </li>
+            <li>
+                <a href="login.html"><button>Become a Seller</button></a>
+            </li>
+            <li>
+                <a href="cart.html"><button>Cart</button></a>
+            </li>
+        </ul>
     </div>
-    <ul>
-        <li>
-            <a href="login.html"><button>Login</button></a>
-        </li>
-        <li>
-            <a href="login.html"><button>Become a Seller</button></a>
-        </li>
-        <li>
-            <a href="login.html"><button>Cart</button></a>
-        </li>
-    </ul>
-</div>
 </body>
 </html>
