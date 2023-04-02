@@ -6,6 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        footer{
+  display: flex;
+  background-color: rgb(23,35,55);
+  justify-content: space-evenly;
+  padding-top: 20px ;
+  padding-bottom: 20px ;
+}
+footer h3{
+  color: rgb(102,121,128);
+  font-size:50%;
+}
+footer h4{
+  color: white;
+  font-size: 50%;
+
+}
+.nav{
+            background-color: rgb(40,116,240);
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+        .nav>div{
+            margin: 10px;
+        }
+        
+        img{
+            width: 200px;
+            height: min-content;
+            padding: 20px;
+            margin: auto;
+        }
+        .Search{
+            padding: 20px;
+            display: flex;
+            width: 30%;
+            justify-content: flex-end;
+            border: none;
+        }
+        .Search form{
+            display: flex;
+            width: 100%;
+            padding: 20px;
+            border: none;
+        }
+        .Search input{
+            width: 80%;
+            height: 100%;
+            border: none;
+        }
+        .Search button{
+            width: 20%;
+            text-align: center;
+            height: 100%;
+            border: none;
+            
+        }
+        .nav  button:hover{
+            background-color: grey;
+        }
+        /* .options{
+            display: flex;
+            width: 45%;
+            margin: auto;
+            padding: 20px;
+            justify-content:space-between;
+        } */
+        .options>div{
+            margin: auto;
+            width: 10%;
+            align-items: center;
+            display: flex;
+
+        }
+        .button img{
+           width:20% ;
+            
+        }
+        .nav button{
+            width: min-content;
+            padding: 20px;
+            background: none;
+            border: 0px;
+            color: white;
+            font-size: 20px;
+        }
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            width: 50%;
+            margin-top: auto;
+            margin-bottom: auto;
+            border: none;
+            list-style: none;
+            
+        }
      #adress{
         text-align: center;
         align-items: center;
@@ -25,12 +122,15 @@
         justify-content:center;
         margin: 20px;
     }  
-    img{
+   .adress img{
         width: 20px;
         height: 20%;
         margin-right: 10px;
         align-self: center;
     }  
+    #adress{
+        flex-direction: row;
+    }
     input , select{
         margin-left: 20px;
     }
@@ -46,9 +146,39 @@
     button:hover{
        background-color:  slateblue;
     }
+    @media screen and (max-width: 700px) {
+  
+        .Search{
+            display: none;
+        }
+    }
     </style>
 </head>
 <body>
+    <div class="nav">
+        
+        <a href="index.html"><img src="logofinal.png" alt=""></a>
+    
+    <div class="Search">
+        <form>
+            <input type="text" placeholder="Search Here">
+            <button>
+                Search
+            </button>
+        </form>
+    </div>
+    <ul>
+        <li>
+            <a href="login.html"><button>Login</button></a>
+        </li>
+        <li>
+            <a href="login.html"><button>Become a Seller</button></a>
+        </li>
+        <li>
+            <a href="cart.html"><button>Cart</button></a>
+        </li>
+    </ul>
+    </div>
     <h1>
         Check Out
     </h1>
@@ -109,8 +239,8 @@
                     <option value="KL">Kerala</option>
                     <option value="MP">Madhya Pradesh</option>
                     <option value="MH">Maharashtra</option>
-                        <option value="MN">Manipur</option>
-                        <option value="ML">Meghalaya</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
                     <option value="MZ">Mizoram</option>
                     <option value="NL">Nagaland</option>
                     <option value="OR">Odisha</option>
@@ -157,5 +287,90 @@
 
         </div>
     </div>
+    <!-- footer -->
+    <footer>
+        <div class="about">
+          <h3>ABOUT</h3>
+          
+          <h4>
+            Contact Us
+            <br>About Us <br> Careers
+            <br>Flipkart Stories
+            <br>Press
+            <br>Flipkart Wholesale
+            <br>Corporate Information
+          </h4>
+        </div>
+        <div class="payments">
+          <h3>HELP</h3>
+          <h4>
+            Payments
+  <br> Shipping
+  <br>Cancellation & <br>Returns
+  <br>FAQ
+  <br>Report<br> Infringement
+          </h4>
+        </div>
+        <div class="consumer policy">
+          <h3>CONSUMER POLICY</h3>
+          <h4>
+            Return Policy
+            <br>Terms Of Use
+            <br>Security
+            <br>Privacy
+            <br>Sitemap
+            <br>Grievance Redressal
+            <br>EPR Compliance
+          </h4>
+        </div>
+        <div class="social">
+          <h3>Social</h3>
+          <h4>
+            Facebook
+            <br>Twitter
+            <br>YouTube
+          </h4>
+        </div>
+        <div class="mail">
+          <h3>
+            Mail Us:
+          </h3>
+          <h4>
+            Flipkart Internet Private Limited,
+  
+            <br>Buildings Alyssa, Begonia &
+  
+            <br>Clove Embassy Tech Village,
+  
+            <br>Outer Ring Road, Devarabeesanahalli Village,
+  
+            <br>Bengaluru, 560103,
+  
+            <br>Karnataka, India
+          </h4>
+  
+        </div>
+        <div class="officeAdress">
+          <h3>Registered Office Address:</h3>
+          <h4>
+            Flipkart Internet Private Limited,
+  
+            <br>Buildings Alyssa, Begonia &
+  
+            <br>Clove Embassy Tech Village,
+  
+            <br>Outer Ring Road, Devarabeesanahalli Village,
+  
+            <br>Bengaluru, 560103,
+  
+            <br>Karnataka, India
+  
+            <br>CIN : U51109KA2012PTC066107
+  
+            <br>Telephone: 044-45614700
+          </h4>
+        </div>
+      </footer>
+  <!-- footer -->
 </body>
 </html>
