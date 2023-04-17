@@ -1,3 +1,4 @@
 # Flipkart
-I shall be creating a flipkart clone somewhat.
-The necessary pagaes shall be homepage
+This is a partial clone of FLipcart
+Deployed on Netlify - https://monumental-seahorse-0e10f5.netlify.app
+
